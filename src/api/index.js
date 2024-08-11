@@ -20,12 +20,12 @@ export const fetchTodos = async (query = '') => {
     return [...filteredTodos];
 }
 
-export const addTodo = async (todo = '') => {
+export const addTodo = async (title = '') => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const newTodo = {
         id: todos.length + 1,
-        title: todo.title,
+        title: title,
         completed: false
     }
     
